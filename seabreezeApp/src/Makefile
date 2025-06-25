@@ -5,6 +5,7 @@ include $(TOP)/configure/CONFIG
 
 LIBRARY_IOC = seabreeze
 
+USR_CXXFLAGS += -std=c++11
 
 INC += api/DeviceFactory.h
 INC += api/DllDecl.h
@@ -738,7 +739,9 @@ LIB_SRCS += WriteEEPROMSlotExchange.cpp
 LIB_SRCS += WriteTECQESetPointExchange.cpp
 LIB_SRCS += WriteTECSetPointExchange.cpp
 
-
+LIB_SRCS += NativeUSBLinux.cpp
+LIB_SRCS += NativeRS232POSIX.c
+LIB_SRCS += NativeSystemPOSIX.c
 
 #=============================
 

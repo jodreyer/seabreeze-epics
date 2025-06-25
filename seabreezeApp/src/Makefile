@@ -739,7 +739,9 @@ LIB_SRCS += WriteEEPROMSlotExchange.cpp
 LIB_SRCS += WriteTECQESetPointExchange.cpp
 LIB_SRCS += WriteTECSetPointExchange.cpp
 
-LIB_SRCS += NativeUSBLinux.cpp
+ifeq (linux, $(findstring linux, $(T_A)))
+LIB_SRCS += NativeUSBLinux.c
+endif
 LIB_SRCS += NativeRS232POSIX.c
 LIB_SRCS += NativeSystemPOSIX.c
 
